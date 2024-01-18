@@ -9,7 +9,7 @@
     padding: 20px;
     width: 100%;
     max-height: 400px;
-    max-width: 100px;
+    /* max-width: 130px; */
 
 }
 
@@ -35,4 +35,8 @@
 .product__info {
     height: 100px;
     margin-bottom: 15px;
+}
+
+.product__rating{
+    display: flex;
 }
