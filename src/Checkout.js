@@ -4,7 +4,7 @@ import "./Checkout.css";
 function Checkout() {
   return (
     <div className="checkout">
-      <h1>ayoooooooooooooo</h1>
+      <h1>checkout page</h1>
     </div>
   )
 }
