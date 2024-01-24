@@ -4,7 +4,14 @@ import "./Checkout.css";
 function Checkout() {
   return (
     <div className="checkout">
-      <h1>ayoooooooooooooo</h1>
+      <div className="checkout__left">
+        <div>
+          <h2>Your Shopping Basket</h2>
+        </div>
+      </div>
+      <div className="checkout__right">
+        <h2>subtotal</h2>
+      </div>
     </div>
   );
 }
