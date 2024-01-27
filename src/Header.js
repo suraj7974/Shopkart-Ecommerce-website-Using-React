@@ -13,7 +13,7 @@ function Header() {
       <Link to="/">
         <img
           className="header_logo"
-          src="https://wallpapercave.com/wp/wp7771255.png"
+          src="./images/logo.png"
         />
       </Link>
       <div className="header_search">
