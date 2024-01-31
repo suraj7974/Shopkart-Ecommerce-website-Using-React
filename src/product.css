@@ -26,6 +26,7 @@
     margin-top: 10px;
     color: #111;
     border-color: #a88734 #9c7e31 #846a29;
+    cursor: pointer;
 }
 
 .product__price{
