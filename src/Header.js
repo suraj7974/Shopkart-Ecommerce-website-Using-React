@@ -18,7 +18,7 @@ function Header() {
         <SearchIcon className="header_searchIcon" />
       </div>
       <div className="header_nav">
-        <Link to="/login">
+        <Link to="/login" style={{ textDecoration: 'none' }}>
           <div className="header_option">
             <span className="header_option1">Hello guest</span>
             <span className="header_option2">Sign In</span>
@@ -35,7 +35,7 @@ function Header() {
           <span className="header_option2"> Prime</span>
         </div>
 
-        <Link to="/checkout">
+        <Link to="/checkout" style={{ textDecoration: 'none' }}>
           <div className="header_optionBasket">
             <ShoppingBasketIcon />
             <span className="herder_option2 header_basketCount">

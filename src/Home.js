@@ -68,9 +68,10 @@ function Home() {
         <div className="home__row">
           <Product
             id=""
-            title="Durex Mutual Climax Condoms for Men & Women - 10 Count"
-            price={69.69}
-            image="https://m.media-amazon.com/images/I/41Dp2Xk4W+L._SY300_SX300_.jpg"
+            title='
+            Fire-Boltt Ninja Call Pro Plus 1.83" Smart Watch with Bluetooth Calling, AI Voice Assistance, 100 Sports Modes IP67 Rating, 240 * 280 Pixel High Resolution'
+            price={77.77+" (Thala for a reason)"} 
+            image="https://m.media-amazon.com/images/I/61AHiYyu3ZL._SL1500_.jpg"
             rating={5}
           />
           <Product
