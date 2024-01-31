@@ -8,7 +8,7 @@ function CheckoutProduct({ id, image, title, price, rating }) {
     dispatch ({
       type: 'REMOVE_FROM_BASKET',
       id: id,
-      
+
     })
   };
 
@@ -30,7 +30,7 @@ function CheckoutProduct({ id, image, title, price, rating }) {
         </div>
         <button onClick={removeFromBasket}>Remove from Basket</button>
       </div>
-    </div>
+    </div> 
   );
 }
 
