@@ -1,17 +1,34 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "./firebase";
 
 function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const signIn = (e) => {
     e.preventDefault();
-};
-const register = e => {
-     e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        if (userCredential) {
+          navigate('/');
+        }
+      })
+      .catch((error) => alert(error.message));
+  };
 
- }
+  const register = (e) => {
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        if (userCredential) {
+          navigate('/');
+        }
+      })
+      .catch((error) => alert(error.message));
+  };
 
   return (
     <div className="login">
@@ -20,34 +37,33 @@ const register = e => {
       </Link>
       <div className="login__container">
         <h1>Sign-in</h1>
-
-        <form action="">
+        <form>
           <h5>E-mail</h5>
           <input
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-
           <h5>Password</h5>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-
           <button
-            onclick={signIn}
+            onClick={signIn}
             type="submit"
             className="login__signInButton"
           >
             Sign In
           </button>
           <p>
-            This is just a project for learning purpose its not a actuall
-            website for buying products. Thankyou!!
+            This is just a project for learning purposes; it's not an actual
+            website for buying products. Thank you!!
           </p>
-          <button onclick={register} className="login__registerButton">Create Your Account</button>
+          <button onClick={register} className="login__registerButton">
+            Create Your Account
+          </button>
         </form>
       </div>
     </div>
