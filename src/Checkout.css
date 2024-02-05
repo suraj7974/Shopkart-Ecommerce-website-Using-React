@@ -6,11 +6,10 @@
     justify-content:space-between;
 }
 
-.checkout__ad{
-    width:650px;
-    height:90px;
+.checkout__ad {
+    width: 100%;
     margin-bottom: 10px;
-}
+  }
 .checkout__title{
     margin-right: 10px;
     padding:10px;
