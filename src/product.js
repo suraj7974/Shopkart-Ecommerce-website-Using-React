@@ -1,35 +1,10 @@
 import React from "react";
 import "./product.css";
 import { useStateValue } from "./StateProvider";
-import _ from 'lodash';
+import _ from "lodash";
 
 function Product({ id, title, image, price, rating }) {
   const [{ basket }, dispatch] = useStateValue();
-  
-  var button = document.getElementsByTagName("button");
-  var isAnimating = false;
-
-  for (var but of button) {
-    but.addEventListener("click", (e) => {
-      if (!isAnimating) {
-        isAnimating = true;
-        e.target.disabled = true; // Disable the button during animation
-        var image = e.target.parentNode.querySelector("img");
-        var span = e.target.parentNode.querySelector("span");
-        var s_image = image.cloneNode(false);
-        span.appendChild(s_image);
-        span.classList.add("active");
-  
-        setTimeout(() => {
-          span.classList.remove("active");
-          span.removeChild(s_image);
-          isAnimating = false;
-          e.target.disabled = false; // Enable the button after animation
-        }, 500);
-      }
-    });
-  }
-
   const addToBasket = () => {
     dispatch({
       type: "ADD_TO_BASKET",
@@ -41,6 +16,14 @@ function Product({ id, title, image, price, rating }) {
         rating: rating,
       },
     });
+
+    const basketIcon = document.getElementById("basket-icon");
+    basketIcon.classList.add("basket-shake");
+
+    // Remove the class after the animation duration (adjust this value as needed)
+    setTimeout(() => {
+      basketIcon.classList.remove("basket-shake");
+    }, 500);
   };
   return (
     <div className="product">

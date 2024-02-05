@@ -43,7 +43,7 @@ function Header() {
 
         <Link to="/checkout" style={{ textDecoration: 'none' }}>
           <div className="header_optionBasket">
-            <ShoppingBasketIcon />
+            <ShoppingBasketIcon id="basket-icon" />
             <span className="herder_option2 header_basketCount">
               {basket?.length}
             </span>
