@@ -9,8 +9,14 @@
     padding: 20px;
     width: 100%;
     max-height: 400px;
-    /* max-width: 130px; */
+    transition: .5s;
+}
 
+.product:hover {
+ transform: scale(1.05);
+ z-index: 2;
+ box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
+ border-radius: 6px;
 }
 
 .product > img {
