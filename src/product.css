@@ -1,49 +1,181 @@
-.product{
-    display:flex;
-    flex-direction: column;
-    background-color: #fff;
-    z-index: 1;
-    align-items: center;
-    justify-content:flex-end;
-    margin:10px;
-    padding: 20px;
-    width: 100%;
-    max-height: 400px;
-    transition: .5s;
+.product {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  z-index: 1;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  max-height: 400px;
+  transition: 0.5s;
 }
 
 .product:hover {
- transform: scale(1.05);
- z-index: 2;
- box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
- border-radius: 6px;
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
+  border-radius: 6px;
 }
 
 .product > img {
-    max-height: 200px;
-    width: 100%;
-    object-fit: contain;
-    margin-bottom: 15px;
+  max-height: 200px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
 }
 
 .product > button {
-    background: #f0c14b;
-    border: 1px solid;
-    margin-top: 10px;
-    color: #111;
-    border-color: #a88734 #9c7e31 #846a29;
-    cursor: pointer;
+  background: #f0c14b;
+  border: 1px solid;
+  margin-top: 10px;
+  color: #111;
+  border-color: #a88734 #9c7e31 #846a29;
+  cursor: pointer;
 }
 
-.product__price{
-    margin-top:5px;
+.product__price {
+  margin-top: 5px;
 }
 
 .product__info {
-    height: 100px;
-    margin-bottom: 15px;
+  height: 100px;
+  margin-bottom: 15px;
 }
 
-.product__rating{
-    display: flex;
+.product__rating {
+  display: flex;
+}
+/*  */
+.hoverToCart {
+  position: absolute;
+  top: 100px;
+  left: 13px;
+  background: red;
+  width: 300px;
+  height: 186px;
+  display: none;
+}
+div:nth-child(1) > span.active {
+  animation: first 0.5s ease-in;
+  z-index: 2;
+  display: block;
+}
+div:nth-child(2) > span.active {
+  animation: first 0.5s ease-in;
+  z-index: 2;
+  display: block;
+}
+div:nth-child(3) > span.active {
+  animation: first 0.5s ease-in;
+  z-index: 2;
+  display: block;
+}
+div:nth-child(4) > span.active {
+  animation: first 0.5s ease-in;
+  z-index: 2;
+  display: block;
+}
+div:nth-child(5) > span.active {
+  animation: first 0.5s ease-in;
+  z-index: 2;
+  display: block;
+}
+div:nth-child(6) > span.active {
+  animation: first 0.5s ease-in;
+  z-index: 2;
+  display: block;
+}
+div:nth-child(7) > span.active {
+  animation: first 0.5s ease-in;
+  z-index: 2;
+  display: block;
+}
+div:nth-child(8) > span.active {
+  animation: first 0.5s ease-in;
+  z-index: 2;
+  display: block;
+}
+div:nth-child(9) > span.active {
+  animation: first 0.5s ease-in;
+  z-index: 2;
+  display: block;
+}
+@keyframes first {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(0.011); 
+    left: 1290px;
+    top: -70px;
+  }
+}
+@keyframes second {
+  to {
+    width: 30px;
+    height: 20px;
+    left: 1290px;
+    top: -70px;
+  }
+}
+@keyframes third {
+  to {
+    width: 30px;
+    height: 20px;
+    left: 1290px;
+    top: -70px;
+  }
+}
+@keyframes fourth {
+  to {
+    width: 30px;
+    height: 20px;
+    left: 1290px;
+    top: -70px;
+  }
+}
+@keyframes fifth {
+  to {
+    width: 30px;
+    height: 20px;
+    left: 1290px;
+    top: -70px;
+  }
+}
+@keyframes sixth {
+  to {
+    width: 30px;
+    height: 20px;
+    left: 1290px;
+    top: -70px;
+  }
+}
+@keyframes seventh {
+  to {
+    width: 30px;
+    height: 20px;
+    left: 1290px;
+    top: -70px;
+  }
+}
+@keyframes eighth {
+  to {
+    width: 30px;
+    height: 20px;
+    left: 1290px;
+    top: -70px;
+  }
+}
+@keyframes ninth {
+  to {
+    width: 30px;
+    height: 20px;
+    left: 1290px;
+    top: -70px;
+  }
 }
