@@ -20,8 +20,8 @@ function Header() {
         <img className="header_logo" src="./images/logo.png" />
       </Link>
       <div className="header_search">
-        <input className="header_searchInput" type="text" />
         <SearchIcon className="header_searchIcon" />
+        <input className="header_searchInput" type="text"  placeholder="Explore more" />
       </div>
       <div className="header_nav">
         <Link to={!user && "/login"} style={{ textDecoration: 'none' }}>
