@@ -47,5 +47,5 @@ div > button {
 }
 
 .item-slide {
-  animation: slideOut 2s ease forwards;
+  animation: slideOut 2.35s ease forwards;
 }
