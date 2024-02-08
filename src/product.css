@@ -15,7 +15,7 @@
 .product:hover {
   transform: scale(1.05);
   z-index: 2;
-  box-shadow: 5px 5px 5px 2px #bbbbbb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
 }
 

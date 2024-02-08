@@ -1,7 +1,6 @@
 import React from "react";
 import "./product.css";
 import { useStateValue } from "./StateProvider";
-import _ from "lodash";
 
 function Product({ id, title, image, price, rating }) {
   const [{ basket }, dispatch] = useStateValue();
@@ -20,7 +19,6 @@ function Product({ id, title, image, price, rating }) {
     const basketIcon = document.getElementById("basket-icon");
     basketIcon.classList.add("basket-shake");
 
-    // Remove the class after the animation duration (adjust this value as needed)
     setTimeout(() => {
       basketIcon.classList.remove("basket-shake");
     }, 500);
