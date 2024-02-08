@@ -1,8 +1,36 @@
 .payment__items {
   box-shadow: 0 0 2px #bbbbbb;
-  padding-top: 1px;
+ border-radius: 4px;
+
 }
 
-#forPaddingOnly {
-    padding-bottom: 3px;
+.payment {
+  background-color: #fff;
+}
+
+.payment__container > h1 {
+  text-align: center;
+  padding: 1opx;
+  font-weight: 400;
+  background-color: rgb(234, 237, 237);
+  border-bottom: 1px solid lightgrey;
+}
+
+.payment__container > h1 a {
+  text-decoration: none;
+}
+
+.payment__section {
+  display: flex;
+  padding: 20px;
+  margin: 0 20px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.payment__title {
+    flex: 0.2;
+}
+
+.payment__address, .payment__items {
+    flex: 0.8;
 }
