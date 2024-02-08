@@ -1,0 +1,8 @@
+.payment__items {
+  box-shadow: 0 0 2px #bbbbbb;
+  padding-top: 1px;
+}
+
+#forPaddingOnly {
+    padding-bottom: 3px;
+}
