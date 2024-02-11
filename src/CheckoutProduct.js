@@ -14,8 +14,10 @@ function CheckoutProduct({ id, image, title, price, rating }) {
         id: id,
       });
       setIsRemoving(false);
+      console.log("Item removed from basket with id:", id);
     }, 1300);
   };
+  
 
   return (
     <div>
