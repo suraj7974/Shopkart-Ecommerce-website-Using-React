@@ -8,6 +8,12 @@ import Login from "./Login";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import Payment from "./Payment";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+const promise = loadStripe(
+  "pk_test_51OihBkSECllgRtVLUcv3F3PZtgjAaxOYNcqPbFmqor5qvvKb74jnh56GaYSeBkWRrnkUq4DPxIVXyQ4INYiotwWe00cjwU0s0j"
+);
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -35,10 +41,15 @@ function App() {
     <Router>
       <div className="app">
         <Routes>
-          <Route path="/checkout" element={[<Header />, <Checkout />]} />
-          <Route path="/" element={[<Header />, <Home />]} />
-          <Route path="/login" element={[<Login />]} />
-          <Route path="/payment" element={[<Header />, <Payment />]} />
+          <Route path="/checkout" element={<><Header /><Checkout /></>} />
+          <Route path="/" element={<><Header /><Home /></>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/payment" element={<>
+            <Header />
+            <Elements stripe={promise}>
+              <Payment />
+            </Elements>
+          </>} />
         </Routes>
       </div>
     </Router>
